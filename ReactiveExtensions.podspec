@@ -17,6 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "ReactiveExtensions/**/*.{swift}"
 
+  spec.framework = "XCTest"
   spec.dependency 'ReactiveSwift', '~> 6.1'
 
 end
