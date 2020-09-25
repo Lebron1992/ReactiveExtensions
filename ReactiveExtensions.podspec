@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "Lebron" => "wenzhi.zeng@outook.com" }
 
-  spec.source       = { :git => "http://Lebron1992/ReactiveExtensions.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Lebron1992/ReactiveExtensions.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "ReactiveExtensions/**/*.{swift}"
 
