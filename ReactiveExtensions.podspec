@@ -15,9 +15,8 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/Lebron1992/ReactiveExtensions.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "ReactiveExtensions/**/*.{swift}"
+  spec.source_files  = "ReactiveExtensions/**/*.swift"
 
-  spec.framework = "XCTest"
   spec.dependency 'ReactiveSwift', '~> 6.1'
 
 end

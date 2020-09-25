@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,6 @@
 		FDE7A520251D764C00C599BE /* LazyAssociatedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4CF251D764C00C599BE /* LazyAssociatedProperty.swift */; };
 		FDE7A521251D764C00C599BE /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D0251D764C00C599BE /* LazyMutableProperty.swift */; };
 		FDE7A522251D764C00C599BE /* DispatchTimeInterval-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D1251D764C00C599BE /* DispatchTimeInterval-Extensions.swift */; };
-		FDE7A523251D764C00C599BE /* Event-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D3251D764C00C599BE /* Event-Extensions.swift */; };
-		FDE7A525251D764C00C599BE /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D5251D764C00C599BE /* SomeError.swift */; };
-		FDE7A527251D764C00C599BE /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D7251D764C00C599BE /* Tuple.swift */; };
 		FDE7A52A251D764C00C599BE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4DB251D764C00C599BE /* UIView.swift */; };
 		FDE7A52C251D764C00C599BE /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4DD251D764C00C599BE /* NSLayoutConstraint.swift */; };
 		FDE7A52E251D764C00C599BE /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4DF251D764C00C599BE /* UIActivityIndicator.swift */; };
@@ -89,6 +86,9 @@
 		FDE7A58F251D774700C599BE /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D6251D764C00C599BE /* TestObserver.swift */; };
 		FDE7A590251D774700C599BE /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4FF251D764C00C599BE /* SlidingWindowTest.swift */; };
 		FDE7A591251D774700C599BE /* ValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A519251D764C00C599BE /* ValuesTests.swift */; };
+		FDE7A6BD251DA55200C599BE /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D7251D764C00C599BE /* Tuple.swift */; };
+		FDE7A6BE251DA55200C599BE /* Event-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D3251D764C00C599BE /* Event-Extensions.swift */; };
+		FDE7A6BF251DA55200C599BE /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4D5251D764C00C599BE /* SomeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,7 +259,6 @@
 			children = (
 				FDE7A4CE251D764C00C599BE /* helpers */,
 				FDE7A4F7251D764C00C599BE /* operators */,
-				FDE7A4D2251D764C00C599BE /* test-helpers */,
 				FDE7A4D8251D764C00C599BE /* UIKit */,
 				FDE7A4B0251D74AA00C599BE /* ReactiveExtensions.h */,
 				FDE7A4B1251D74AA00C599BE /* Info.plist */,
@@ -270,6 +269,9 @@
 		FDE7A4BA251D74AA00C599BE /* ReactiveExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDE7A6B2251DA52B00C599BE /* UIKit */,
+				FDE7A6B1251DA51800C599BE /* test-helpers */,
+				FDE7A6AC251DA4EC00C599BE /* operators */,
 				FDE7A4BD251D74AA00C599BE /* Info.plist */,
 			);
 			path = ReactiveExtensionsTests;
@@ -285,7 +287,85 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
-		FDE7A4D2251D764C00C599BE /* test-helpers */ = {
+		FDE7A4D8251D764C00C599BE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FDE7A4DB251D764C00C599BE /* UIView.swift */,
+				FDE7A4DD251D764C00C599BE /* NSLayoutConstraint.swift */,
+				FDE7A4DF251D764C00C599BE /* UIActivityIndicator.swift */,
+				FDE7A4E0251D764C00C599BE /* UIStepper.swift */,
+				FDE7A4E1251D764C00C599BE /* UIStackView.swift */,
+				FDE7A4E2251D764C00C599BE /* UIBarButtonItem.swift */,
+				FDE7A4E3251D764C00C599BE /* Rac.swift */,
+				FDE7A4E4251D764C00C599BE /* UINavigationItem.swift */,
+				FDE7A4E6251D764C00C599BE /* NSObject.swift */,
+				FDE7A4EA251D764C00C599BE /* UIRefreshControl.swift */,
+				FDE7A4EC251D764C00C599BE /* UITextField.swift */,
+				FDE7A4F0251D764C00C599BE /* UIResponder.swift */,
+				FDE7A4F1251D764C00C599BE /* UIButton.swift */,
+				FDE7A4F2251D764C00C599BE /* UISwitch.swift */,
+				FDE7A4F3251D764C00C599BE /* UILabel.swift */,
+				FDE7A4F5251D764C00C599BE /* UITextView.swift */,
+				FDE7A4F6251D764C00C599BE /* UIControl.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FDE7A4F7251D764C00C599BE /* operators */ = {
+			isa = PBXGroup;
+			children = (
+				FDE7A4F8251D764C00C599BE /* SlidingWindow.swift */,
+				FDE7A4FA251D764C00C599BE /* KsrDelay.swift */,
+				FDE7A4FB251D764C00C599BE /* Uncollect.swift */,
+				FDE7A4FD251D764C00C599BE /* MapConst.swift */,
+				FDE7A500251D764C00C599BE /* Concat.swift */,
+				FDE7A502251D764C00C599BE /* Enumerated.swift */,
+				FDE7A503251D764C00C599BE /* MergeMap.swift */,
+				FDE7A504251D764C00C599BE /* FlatMap.swift */,
+				FDE7A505251D764C00C599BE /* ConcatMap.swift */,
+				FDE7A506251D764C00C599BE /* ObserveForUI.swift */,
+				FDE7A507251D764C00C599BE /* KsrDebounce.swift */,
+				FDE7A508251D764C00C599BE /* WithLatestFrom.swift */,
+				FDE7A50B251D764C00C599BE /* FilterWhenLatestFrom.swift */,
+				FDE7A50C251D764C00C599BE /* TakeUntil.swift */,
+				FDE7A50D251D764C00C599BE /* Sort.swift */,
+				FDE7A50F251D764C00C599BE /* TakeWhen.swift */,
+				FDE7A510251D764C00C599BE /* MergeWith.swift */,
+				FDE7A512251D764C00C599BE /* Errors.swift */,
+				FDE7A514251D764C00C599BE /* SwitchMap.swift */,
+				FDE7A515251D764C00C599BE /* Values.swift */,
+				FDE7A518251D764C00C599BE /* WrapInOptional.swift */,
+				FDE7A51A251D764C00C599BE /* Scan.swift */,
+				FDE7A51B251D764C00C599BE /* AllValues.swift */,
+				FDE7A51D251D764C00C599BE /* DemoteErrors.swift */,
+				FDE7A51E251D764C00C599BE /* IgnoreValues.swift */,
+			);
+			path = operators;
+			sourceTree = "<group>";
+		};
+		FDE7A6AC251DA4EC00C599BE /* operators */ = {
+			isa = PBXGroup;
+			children = (
+				FDE7A4F9251D764C00C599BE /* SortTests.swift */,
+				FDE7A4FC251D764C00C599BE /* TakeWhenTests.swift */,
+				FDE7A4FE251D764C00C599BE /* WithLatestFromTests.swift */,
+				FDE7A4FF251D764C00C599BE /* SlidingWindowTest.swift */,
+				FDE7A501251D764C00C599BE /* ConcatTests.swift */,
+				FDE7A509251D764C00C599BE /* ErrorsTests.swift */,
+				FDE7A50A251D764C00C599BE /* UncollectTests.swift */,
+				FDE7A50E251D764C00C599BE /* TakeUntilTests.swift */,
+				FDE7A511251D764C00C599BE /* AllValuesTests.swift */,
+				FDE7A513251D764C00C599BE /* DebounceTests.swift */,
+				FDE7A516251D764C00C599BE /* ScanTests.swift */,
+				FDE7A517251D764C00C599BE /* MapConstTests.swift */,
+				FDE7A519251D764C00C599BE /* ValuesTests.swift */,
+				FDE7A51C251D764C00C599BE /* EnumeratedTests.swift */,
+				FDE7A51F251D764C00C599BE /* DemoteErrorsTests.swift */,
+			);
+			path = operators;
+			sourceTree = "<group>";
+		};
+		FDE7A6B1251DA51800C599BE /* test-helpers */ = {
 			isa = PBXGroup;
 			children = (
 				FDE7A4D3251D764C00C599BE /* Event-Extensions.swift */,
@@ -297,88 +377,24 @@
 			path = "test-helpers";
 			sourceTree = "<group>";
 		};
-		FDE7A4D8251D764C00C599BE /* UIKit */ = {
+		FDE7A6B2251DA52B00C599BE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				FDE7A4D9251D764C00C599BE /* UIStepperTests.swift */,
 				FDE7A4DA251D764C00C599BE /* UITextFieldTests.swift */,
-				FDE7A4DB251D764C00C599BE /* UIView.swift */,
 				FDE7A4DC251D764C00C599BE /* UIActivityIndicatorTests.swift */,
-				FDE7A4DD251D764C00C599BE /* NSLayoutConstraint.swift */,
 				FDE7A4DE251D764C00C599BE /* UISwitchTests.swift */,
-				FDE7A4DF251D764C00C599BE /* UIActivityIndicator.swift */,
-				FDE7A4E0251D764C00C599BE /* UIStepper.swift */,
-				FDE7A4E1251D764C00C599BE /* UIStackView.swift */,
-				FDE7A4E2251D764C00C599BE /* UIBarButtonItem.swift */,
-				FDE7A4E3251D764C00C599BE /* Rac.swift */,
-				FDE7A4E4251D764C00C599BE /* UINavigationItem.swift */,
 				FDE7A4E5251D764C00C599BE /* NSLayoutConstraintTests.swift */,
-				FDE7A4E6251D764C00C599BE /* NSObject.swift */,
 				FDE7A4E7251D764C00C599BE /* UIRefreshControlTests.swift */,
 				FDE7A4E8251D764C00C599BE /* UIControlTests.swift */,
 				FDE7A4E9251D764C00C599BE /* UIViewTests.swift */,
-				FDE7A4EA251D764C00C599BE /* UIRefreshControl.swift */,
 				FDE7A4EB251D764C00C599BE /* UIButtonTests.swift */,
-				FDE7A4EC251D764C00C599BE /* UITextField.swift */,
 				FDE7A4ED251D764C00C599BE /* UITextViewTests.swift */,
 				FDE7A4EE251D764C00C599BE /* UILabelTests.swift */,
 				FDE7A4EF251D764C00C599BE /* UIBarButtonItemTests.swift */,
-				FDE7A4F0251D764C00C599BE /* UIResponder.swift */,
-				FDE7A4F1251D764C00C599BE /* UIButton.swift */,
-				FDE7A4F2251D764C00C599BE /* UISwitch.swift */,
-				FDE7A4F3251D764C00C599BE /* UILabel.swift */,
 				FDE7A4F4251D764C00C599BE /* UIResponderTests.swift */,
-				FDE7A4F5251D764C00C599BE /* UITextView.swift */,
-				FDE7A4F6251D764C00C599BE /* UIControl.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		FDE7A4F7251D764C00C599BE /* operators */ = {
-			isa = PBXGroup;
-			children = (
-				FDE7A4F8251D764C00C599BE /* SlidingWindow.swift */,
-				FDE7A4F9251D764C00C599BE /* SortTests.swift */,
-				FDE7A4FA251D764C00C599BE /* KsrDelay.swift */,
-				FDE7A4FB251D764C00C599BE /* Uncollect.swift */,
-				FDE7A4FC251D764C00C599BE /* TakeWhenTests.swift */,
-				FDE7A4FD251D764C00C599BE /* MapConst.swift */,
-				FDE7A4FE251D764C00C599BE /* WithLatestFromTests.swift */,
-				FDE7A4FF251D764C00C599BE /* SlidingWindowTest.swift */,
-				FDE7A500251D764C00C599BE /* Concat.swift */,
-				FDE7A501251D764C00C599BE /* ConcatTests.swift */,
-				FDE7A502251D764C00C599BE /* Enumerated.swift */,
-				FDE7A503251D764C00C599BE /* MergeMap.swift */,
-				FDE7A504251D764C00C599BE /* FlatMap.swift */,
-				FDE7A505251D764C00C599BE /* ConcatMap.swift */,
-				FDE7A506251D764C00C599BE /* ObserveForUI.swift */,
-				FDE7A507251D764C00C599BE /* KsrDebounce.swift */,
-				FDE7A508251D764C00C599BE /* WithLatestFrom.swift */,
-				FDE7A509251D764C00C599BE /* ErrorsTests.swift */,
-				FDE7A50A251D764C00C599BE /* UncollectTests.swift */,
-				FDE7A50B251D764C00C599BE /* FilterWhenLatestFrom.swift */,
-				FDE7A50C251D764C00C599BE /* TakeUntil.swift */,
-				FDE7A50D251D764C00C599BE /* Sort.swift */,
-				FDE7A50E251D764C00C599BE /* TakeUntilTests.swift */,
-				FDE7A50F251D764C00C599BE /* TakeWhen.swift */,
-				FDE7A510251D764C00C599BE /* MergeWith.swift */,
-				FDE7A511251D764C00C599BE /* AllValuesTests.swift */,
-				FDE7A512251D764C00C599BE /* Errors.swift */,
-				FDE7A513251D764C00C599BE /* DebounceTests.swift */,
-				FDE7A514251D764C00C599BE /* SwitchMap.swift */,
-				FDE7A515251D764C00C599BE /* Values.swift */,
-				FDE7A516251D764C00C599BE /* ScanTests.swift */,
-				FDE7A517251D764C00C599BE /* MapConstTests.swift */,
-				FDE7A518251D764C00C599BE /* WrapInOptional.swift */,
-				FDE7A519251D764C00C599BE /* ValuesTests.swift */,
-				FDE7A51A251D764C00C599BE /* Scan.swift */,
-				FDE7A51B251D764C00C599BE /* AllValues.swift */,
-				FDE7A51C251D764C00C599BE /* EnumeratedTests.swift */,
-				FDE7A51D251D764C00C599BE /* DemoteErrors.swift */,
-				FDE7A51E251D764C00C599BE /* IgnoreValues.swift */,
-				FDE7A51F251D764C00C599BE /* DemoteErrorsTests.swift */,
-			);
-			path = operators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,7 +580,6 @@
 				FDE7A563251D764D00C599BE /* Values.swift in Sources */,
 				FDE7A544251D764C00C599BE /* UITextView.swift in Sources */,
 				FDE7A549251D764C00C599BE /* Uncollect.swift in Sources */,
-				FDE7A527251D764C00C599BE /* Tuple.swift in Sources */,
 				FDE7A540251D764C00C599BE /* UIButton.swift in Sources */,
 				FDE7A56B251D764D00C599BE /* DemoteErrors.swift in Sources */,
 				FDE7A54B251D764C00C599BE /* MapConst.swift in Sources */,
@@ -575,7 +590,6 @@
 				FDE7A52A251D764C00C599BE /* UIView.swift in Sources */,
 				FDE7A550251D764C00C599BE /* Enumerated.swift in Sources */,
 				FDE7A539251D764C00C599BE /* UIRefreshControl.swift in Sources */,
-				FDE7A523251D764C00C599BE /* Event-Extensions.swift in Sources */,
 				FDE7A553251D764D00C599BE /* ConcatMap.swift in Sources */,
 				FDE7A569251D764D00C599BE /* AllValues.swift in Sources */,
 				FDE7A56C251D764D00C599BE /* IgnoreValues.swift in Sources */,
@@ -598,7 +612,6 @@
 				FDE7A555251D764D00C599BE /* KsrDebounce.swift in Sources */,
 				FDE7A53F251D764C00C599BE /* UIResponder.swift in Sources */,
 				FDE7A568251D764D00C599BE /* Scan.swift in Sources */,
-				FDE7A525251D764C00C599BE /* SomeError.swift in Sources */,
 				FDE7A55B251D764D00C599BE /* Sort.swift in Sources */,
 				FDE7A521251D764C00C599BE /* LazyMutableProperty.swift in Sources */,
 				FDE7A552251D764C00C599BE /* FlatMap.swift in Sources */,
@@ -624,14 +637,17 @@
 				FDE7A58D251D774700C599BE /* UIControlTests.swift in Sources */,
 				FDE7A58B251D774700C599BE /* XCTestCase+Async.swift in Sources */,
 				FDE7A586251D774700C599BE /* DebounceTests.swift in Sources */,
+				FDE7A6BF251DA55200C599BE /* SomeError.swift in Sources */,
 				FDE7A57F251D774700C599BE /* UIStepperTests.swift in Sources */,
 				FDE7A585251D774700C599BE /* WithLatestFromTests.swift in Sources */,
 				FDE7A574251D774700C599BE /* AllValuesTests.swift in Sources */,
+				FDE7A6BE251DA55200C599BE /* Event-Extensions.swift in Sources */,
 				FDE7A57B251D774700C599BE /* UIButtonTests.swift in Sources */,
 				FDE7A57E251D774700C599BE /* ScanTests.swift in Sources */,
 				FDE7A58F251D774700C599BE /* TestObserver.swift in Sources */,
 				FDE7A577251D774700C599BE /* TakeUntilTests.swift in Sources */,
 				FDE7A578251D774700C599BE /* UITextFieldTests.swift in Sources */,
+				FDE7A6BD251DA55200C599BE /* Tuple.swift in Sources */,
 				FDE7A58A251D774700C599BE /* UITextViewTests.swift in Sources */,
 				FDE7A579251D774700C599BE /* UncollectTests.swift in Sources */,
 				FDE7A58C251D774700C599BE /* MapConstTests.swift in Sources */,
