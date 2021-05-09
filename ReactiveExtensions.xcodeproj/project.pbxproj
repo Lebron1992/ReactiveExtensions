@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04FE86CA5BC208D16C46B5AA /* Pods_ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F499B4DB48CE72F930752D /* Pods_ReactiveExtensions.framework */; };
 		5EE7C7BDA89F887F32B01C4C /* Pods_ReactiveExtensions_ReactiveExtensionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B033A3673C2364B4F8DFE4F5 /* Pods_ReactiveExtensions_ReactiveExtensionsTests.framework */; };
+		FD828342264791BC009C82B7 /* XCTestCase+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82833D264791BC009C82B7 /* XCTestCase+Async.swift */; };
+		FD828343264791BC009C82B7 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82833E264791BC009C82B7 /* Tuple.swift */; };
+		FD828344264791BC009C82B7 /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82833F264791BC009C82B7 /* SomeError.swift */; };
+		FD828345264791BC009C82B7 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD828340264791BC009C82B7 /* TestObserver.swift */; };
+		FD828346264791BC009C82B7 /* Event-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD828341264791BC009C82B7 /* Event-Extensions.swift */; };
+		FD828349264792D2009C82B7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD828348264792D2009C82B7 /* XCTest.framework */; platformFilter = ios; };
 		FDE7A4B7251D74AA00C599BE /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE7A4AD251D74AA00C599BE /* ReactiveExtensions.framework */; };
 		FDE7A4BE251D74AA00C599BE /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7A4B0251D74AA00C599BE /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDE7A520251D764C00C599BE /* LazyAssociatedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7A4CF251D764C00C599BE /* LazyAssociatedProperty.swift */; };
@@ -108,6 +114,12 @@
 		9E38A641E4E05236368ACD9B /* Pods-ReactiveExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveExtensions.release.xcconfig"; path = "Target Support Files/Pods-ReactiveExtensions/Pods-ReactiveExtensions.release.xcconfig"; sourceTree = "<group>"; };
 		B033A3673C2364B4F8DFE4F5 /* Pods_ReactiveExtensions_ReactiveExtensionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveExtensions_ReactiveExtensionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA619AA802F9FFA51B57AAE3 /* Pods-ReactiveExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveExtensions.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveExtensions/Pods-ReactiveExtensions.debug.xcconfig"; sourceTree = "<group>"; };
+		FD82833D264791BC009C82B7 /* XCTestCase+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Async.swift"; sourceTree = "<group>"; };
+		FD82833E264791BC009C82B7 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		FD82833F264791BC009C82B7 /* SomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
+		FD828340264791BC009C82B7 /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
+		FD828341264791BC009C82B7 /* Event-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event-Extensions.swift"; sourceTree = "<group>"; };
+		FD828348264792D2009C82B7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FDE7A4AD251D74AA00C599BE /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE7A4B0251D74AA00C599BE /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		FDE7A4B1251D74AA00C599BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FE86CA5BC208D16C46B5AA /* Pods_ReactiveExtensions.framework in Frameworks */,
+				FD828349264792D2009C82B7 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +241,23 @@
 		B7BCE6917A5CD1FC4BEE61A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD828348264792D2009C82B7 /* XCTest.framework */,
 				68F499B4DB48CE72F930752D /* Pods_ReactiveExtensions.framework */,
 				B033A3673C2364B4F8DFE4F5 /* Pods_ReactiveExtensions_ReactiveExtensionsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD82833C2647918E009C82B7 /* test-helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD828341264791BC009C82B7 /* Event-Extensions.swift */,
+				FD82833F264791BC009C82B7 /* SomeError.swift */,
+				FD828340264791BC009C82B7 /* TestObserver.swift */,
+				FD82833E264791BC009C82B7 /* Tuple.swift */,
+				FD82833D264791BC009C82B7 /* XCTestCase+Async.swift */,
+			);
+			path = "test-helpers";
 			sourceTree = "<group>";
 		};
 		FDE7A4A3251D74AA00C599BE = {
@@ -257,6 +283,7 @@
 		FDE7A4AF251D74AA00C599BE /* ReactiveExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				FD82833C2647918E009C82B7 /* test-helpers */,
 				FDE7A4CE251D764C00C599BE /* helpers */,
 				FDE7A4F7251D764C00C599BE /* operators */,
 				FDE7A4D8251D764C00C599BE /* UIKit */,
@@ -580,11 +607,13 @@
 				FDE7A563251D764D00C599BE /* Values.swift in Sources */,
 				FDE7A544251D764C00C599BE /* UITextView.swift in Sources */,
 				FDE7A549251D764C00C599BE /* Uncollect.swift in Sources */,
+				FD828343264791BC009C82B7 /* Tuple.swift in Sources */,
 				FDE7A540251D764C00C599BE /* UIButton.swift in Sources */,
 				FDE7A56B251D764D00C599BE /* DemoteErrors.swift in Sources */,
 				FDE7A54B251D764C00C599BE /* MapConst.swift in Sources */,
 				FDE7A55E251D764D00C599BE /* MergeWith.swift in Sources */,
 				FDE7A55D251D764D00C599BE /* TakeWhen.swift in Sources */,
+				FD828342264791BC009C82B7 /* XCTestCase+Async.swift in Sources */,
 				FDE7A566251D764D00C599BE /* WrapInOptional.swift in Sources */,
 				FDE7A52C251D764C00C599BE /* NSLayoutConstraint.swift in Sources */,
 				FDE7A52A251D764C00C599BE /* UIView.swift in Sources */,
@@ -601,6 +630,8 @@
 				FDE7A531251D764C00C599BE /* UIBarButtonItem.swift in Sources */,
 				FDE7A520251D764C00C599BE /* LazyAssociatedProperty.swift in Sources */,
 				FDE7A546251D764C00C599BE /* SlidingWindow.swift in Sources */,
+				FD828345264791BC009C82B7 /* TestObserver.swift in Sources */,
+				FD828346264791BC009C82B7 /* Event-Extensions.swift in Sources */,
 				FDE7A52F251D764C00C599BE /* UIStepper.swift in Sources */,
 				FDE7A560251D764D00C599BE /* Errors.swift in Sources */,
 				FDE7A55A251D764D00C599BE /* TakeUntil.swift in Sources */,
@@ -610,6 +641,7 @@
 				FDE7A532251D764C00C599BE /* Rac.swift in Sources */,
 				FDE7A542251D764C00C599BE /* UILabel.swift in Sources */,
 				FDE7A555251D764D00C599BE /* KsrDebounce.swift in Sources */,
+				FD828344264791BC009C82B7 /* SomeError.swift in Sources */,
 				FDE7A53F251D764C00C599BE /* UIResponder.swift in Sources */,
 				FDE7A568251D764D00C599BE /* Scan.swift in Sources */,
 				FDE7A55B251D764D00C599BE /* Sort.swift in Sources */,

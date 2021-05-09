@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "A collection of extensions to the ReactiveSwift framework. All code comes from Kickstarter-ReactiveExtensions."
   spec.requires_arc = true
 
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
 
   spec.homepage     = "https://github.com/Lebron1992/ReactiveExtensions"
 
@@ -18,6 +18,8 @@ Pod::Spec.new do |spec|
   spec.source_files  = "ReactiveExtensions/**/*.swift"
 
   spec.dependency 'ReactiveSwift', '~> 6.1'
+
+  spec.ios.framework  = 'XCTest'
 
   spec.swift_versions = "5"
 
